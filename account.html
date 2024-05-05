@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Account</title>
+  <link rel="stylesheet" href="account.css">
+</head>
+<body>
+
+<div id="container">
+  <h1>My Account</h1>
+  <p>Welcome, User! You are now logged in.</p>
+  <button id="logout-btn">Logout</button>
+</div>
+
+<footer>
+  <p>&copy; 2024 Cs-Ai Master. All rights reserved.</p>
+</footer>
+
+<script>
+  // Function to handle logout
+  function handleLogout() {
+    // You can perform logout actions here, such as clearing session data
+    alert('Logged out successfully!');
+    // Redirect to the homepage after logout
+    window.location.href = 'index.html';
+  }
+
+  // Add event listener to logout button
+  window.addEventListener('load', () => {
+    const logoutButton = document.getElementById('logout-btn');
+    logoutButton.addEventListener('click', handleLogout);
+  });
+</script>
+
+</body>
+</html>

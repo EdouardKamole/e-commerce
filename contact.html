@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+
+<nav class="main-nav">
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="shop.html">Shop</a></li>
+    <li><a href="categories.html">Categories</a></li>
+    <li><a href="deals.html">Deals</a></li>
+    <li><a href="Services.html">Services</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <form id="search-form">
+    <input type="text" id="search-input" placeholder="Search products...">
+    <button type="submit">Search</button>
+  </form>
+</nav>
+
+<main>
+  <section class="contact">
+    <h1>Contact Us</h1>
+    <form id="contact-form">
+      <div>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div>
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+      </div>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+</main>
+
+<footer>
+  <ul>
+    <li><a href="about.html">About Us</a></li>
+    <li><a href="contact.html">Contact Us</a></li>
+    <li><a href="terms.html">Terms of Service</a></li>
+    <li><a href="privacy.html">Privacy Policy</a></li>
+  </ul>
+</footer>
+
+<script>
+  // Function to handle form submission (contact form)
+  function handleContactForm(event) {
+    event.preventDefault();
+    const formData = new FormData(event.target);
+    const name = formData.get('name');
+    const email = formData.get('email');
+    const message = formData.get('message');
+
+    // You can customize the action here, such as sending the form data to a server
+    alert(`Thank you, ${name}! Your message has been sent.`);
+    event.target.reset(); // Clear the form after submission
+  }
+
+  // Call the function to handle contact form submission
+  window.addEventListener('load', () => {
+    const contactForm = document.getElementById('contact-form');
+    contactForm.addEventListener('submit', handleContactForm);
+  });
+</script>
+
+</body>
+</html>

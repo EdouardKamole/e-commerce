@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Cart</title>
+  <link rel="stylesheet" href="cart.css">
+</head>
+<body>
+
+<div id="container">
+  <h1>Shopping Cart</h1>
+  <div id="cart-items">
+    <!-- Cart items will be dynamically added here -->
+  </div>
+  <div id="cart-total">
+    <p>Total: $<span id="total-price">0.00</span></p>
+  </div>
+  <button id="checkout-btn">Checkout</button>
+</div>
+
+<footer>
+  <p>&copy; 2024 MyCompany. All rights reserved.</p>
+</footer>
+
+<script>
+  // Sample cart items (replace with actual data)
+  const cartItems = [
+    { id: 1, name: 'Product 1', price: 10.99 },
+    { id: 2, name: 'Product 2', price: 19.99 },
+    { id: 3, name: 'Product 3', price: 7.49 }
+  ];
+
+  // Function to display cart items
+  function displayCartItems() {
+    const cartItemsContainer = document.getElementById('cart-items');
+    let totalPrice = 0;
+
+    cartItems.forEach(item => {
+      const itemElement = document.createElement('div');
+      itemElement.innerHTML = `
+        <p>${item.name}</p>
+        <p>$${item.price.toFixed(2)}</p>
+      `;
+      cartItemsContainer.appendChild(itemElement);
+      totalPrice += item.price;
+    });
+
+    document.getElementById('total-price').textContent = totalPrice.toFixed(2);
+  }
+
+  // Function to handle checkout
+  function handleCheckout() {
+    // Implement checkout logic here
+    alert('Thank you for your purchase!');
+    // Redirect to homepage after checkout
+    window.location.href = 'index.html';
+  }
+
+  // Call functions when the page loads
+  window.addEventListener('load', () => {
+    displayCartItems();
+    const checkoutButton = document.getElementById('checkout-btn');
+    checkoutButton.addEventListener('click', handleCheckout);
+  });
+</script>
+
+</body>
+</html>

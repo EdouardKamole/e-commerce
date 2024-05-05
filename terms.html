@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms of Service</title>
+  <link rel="stylesheet" href="terms.css">
+</head>
+<body>
+
+<div id="container">
+    <p>At Salmah E-commerce App, we understand the importance of transparency and trust in every interaction. Our Terms of Service are crafted with meticulous attention to detail to ensure clarity, fairness, and protection for all parties involved. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus volutpat erat ut sapien blandit, vitae pharetra enim consectetur. Donec suscipit dui id magna vestibulum, nec ultricies nisi varius. Duis ultricies ultrices risus, ut condimentum justo tempor ac. Vestibulum lobortis velit in nisl scelerisque, nec consectetur odio auctor. Nulla eu nunc volutpat, placerat sapien eu, aliquet nulla. Nullam auctor libero sit amet nisi volutpat rhoncus. Morbi id ultricies nisi. Nam nec tempor metus. Donec consequat nulla sit amet dui lobortis, eget posuere ex ultrices. Nulla hendrerit, tortor eget hendrerit vehicula, risus orci pharetra mi, vitae malesuada mauris turpis a metus.</p>
+    <p>Suspendisse potenti. Praesent quis justo non nisi congue aliquet sit amet a odio. Donec venenatis quam nec arcu laoreet, id cursus justo volutpat. Duis varius odio at sapien fermentum, nec sollicitudin velit aliquam. Phasellus ac odio ipsum. Maecenas ac eleifend felis. Curabitur tristique diam et dolor auctor, a tempor elit pellentesque.</p>
+    <p>Integer et nulla sed massa interdum accumsan. Nullam non fermentum erat. Ut lacinia eros eu lacus rhoncus, vel suscipit eros placerat. Morbi sed sapien eu arcu sodales pharetra vel at libero. Nullam lobortis purus at lacus consectetur, in tincidunt justo ullamcorper. Fusce aliquet mauris a vestibulum luctus. Phasellus at convallis risus. Duis vestibulum sit amet velit et interdum. Duis mattis, ipsum sit amet tempor commodo, metus turpis laoreet mauris, eu scelerisque enim risus a dolor.</p>
+  <button id="accept-btn">Accept</button>
+  <button id="reject-btn">Reject</button>
+</div>
+
+<script>
+  // Function to handle acceptance
+  function handleAcceptance() {
+    alert('You have accepted the terms of service.');
+    // Implement logic to handle acceptance here
+  }
+
+  // Function to handle rejection
+  function handleRejection() {
+    alert('You have rejected the terms of service.');
+    // Implement logic to handle rejection here
+  }
+
+  // Add event listeners to buttons
+  window.addEventListener('load', () => {
+    const acceptButton = document.getElementById('accept-btn');
+    const rejectButton = document.getElementById('reject-btn');
+    
+    acceptButton.addEventListener('click', handleAcceptance);
+    rejectButton.addEventListener('click', handleRejection);
+  });
+</script>
+
+</body>
+</html>

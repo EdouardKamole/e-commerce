@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services</title>
+</head>
+<body>
+
+<div id="container" style="max-width: 800px; margin: 50px auto; padding: 30px; background-color: #f8f9fa; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+  <h1 style="text-align: center; color: #333333; margin-bottom: 20px;">Services</h1>
+
+  <div class="service-item" style="margin-bottom: 20px; padding: 20px; border: 1px solid #ddd; border-radius: 5px; background-color: #f9f9f9;">
+    <div class="service-title" style="font-weight: bold; color: #007bff; margin-bottom: 10px;">Service Name 1</div>
+    <div class="service-description" style="color: #666666; margin-bottom: 15px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+    <button class="service-button" style="padding: 10px 20px; background-color: #007bff; color: #ffffff; border: none; border-radius: 5px; cursor: pointer; transition: background-color 0.3s ease;">Learn More</button>
+  </div>
+
+  <div class="service-item" style="margin-bottom: 20px; padding: 20px; border: 1px solid #ddd; border-radius: 5px; background-color: #f9f9f9;">
+    <div class="service-title" style="font-weight: bold; color: #007bff; margin-bottom: 10px;">Service Name 2</div>
+    <div class="service-description" style="color: #666666; margin-bottom: 15px;">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+    <button class="service-button" style="padding: 10px 20px; background-color: #007bff; color: #ffffff; border: none; border-radius: 5px; cursor: pointer; transition: background-color 0.3s ease;">Learn More</button>
+  </div>
+
+  <div class="service-item" style="margin-bottom: 20px; padding: 20px; border: 1px solid #ddd; border-radius: 5px; background-color: #f9f9f9;">
+    <div class="service-title" style="font-weight: bold; color: #007bff; margin-bottom: 10px;">Service Name 3</div>
+    <div class="service-description" style="color: #666666; margin-bottom: 15px;">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+    <button class="service-button" style="padding: 10px 20px; background-color: #007bff; color: #ffffff; border: none; border-radius: 5px; cursor: pointer; transition: background-color 0.3s ease;">Learn More</button>
+  </div>
+</div>
+
+<script>
+  // Function to handle learning more about a service
+  function learnMore() {
+    alert('You clicked on Learn More button!');
+    // Implement logic to display more information about the service here
+  }
+
+  // Add click event listener to all Learn More buttons
+  const learnMoreButtons = document.querySelectorAll('.service-button');
+  learnMoreButtons.forEach(button => {
+    button.addEventListener('click', learnMore);
+  });
+</script>
+
+</body>
+</html>

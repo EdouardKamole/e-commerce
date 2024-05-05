@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shipping Information</title>
+</head>
+<body>
+
+<div id="container" style="max-width: 800px; margin: 50px auto; padding: 30px; background-color: #ffffff; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); text-align: justify;">
+  <h1 style="color: #333333; margin-bottom: 20px;">Shipping Information</h1>
+  <p style="color: #666666; margin-bottom: 15px;">At Salmah E-commerce App , we're dedicated to providing fast, reliable shipping to ensure your orders reach you as quickly as possible.
+
+    Shipping Options:
+    
+    Standard Shipping: Our standard shipping option delivers your orders within [X] business days.
+    Express Shipping: Need it faster? Choose our express shipping option for delivery within [X] business days.
+    Same-Day Delivery: Get your orders delivered the same day for eligible items and addresses. Available in select areas.
+    Shipping Costs:
+    
+    Standard Shipping: Enjoy free standard shipping on orders over [X] dollars. For orders below this amount, a flat rate of [X] dollars applies.
+    Express Shipping: Express shipping rates vary based on the weight and destination of your order.
+    Same-Day Delivery: Same-day delivery charges depend on the item's size and your location.
+    Delivery Timeframes:
+    
+    Standard Shipping: Expect your order to arrive within [X] to [X] business days after it ships.
+    Express Shipping: Your order will be delivered within [X] business days after it ships.
+    Same-Day Delivery: Orders placed before [X] PM local time are eligible for same-day delivery.
+    Order Processing Time:
+    
+    Orders typically take [X] to [X] business days to process before shipping.
+    Shipping Policies:</p>
+  <p style="color: #666666; margin-bottom: 15px;">Lost or damaged shipments: In the rare event that your order is lost or damaged during transit, please contact our customer support team for assistance.
+    Returns due to incorrect address: If an order is returned to us due to an incorrect address provided by the customer, additional shipping fees may apply for reshipment.
+    Re-shipping: If a delivery attempt is unsuccessful, we'll make arrangements for re-delivery or provide instructions for pickup at a nearby location.
+    International Shipping:
+    
+    We offer international shipping to select countries. Please note that customs duties, taxes, and import fees may apply, and delivery times may vary.
+    Customer Support:
+    Our customer support team is available [X] days a week to assist you with any shipping-related inquiries or concerns.
+    Frequently Asked Questions (FAQs):
+    
+    For more information about shipping, please visit our FAQs page or contact our customer support team.</p>
+  <button id="confirm-btn" style="padding: 10px 20px; background-color: #007bff; color: #ffffff; border: none; border-radius: 5px; cursor: pointer; transition: background-color 0.3s ease;">Confirm Shipping</button>
+</div>
+
+<script>
+  // Function to handle confirmation
+  function handleConfirmation() {
+    alert('Shipping information confirmed.');
+    // Implement logic to handle confirmation here
+  }
+
+  // Add event listener to the confirmation button
+  window.addEventListener('load', () => {
+    const confirmButton = document.getElementById('confirm-btn');
+    confirmButton.addEventListener('click', handleConfirmation);
+  });
+</script>
+
+</body>
+</html>

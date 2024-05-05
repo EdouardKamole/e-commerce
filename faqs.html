@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQs</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f8f9fa;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 50px auto;
+      padding: 30px;
+      background-color: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      color: #333333;
+      margin-bottom: 20px;
+    }
+
+    .faq-item {
+      margin-bottom: 20px;
+    }
+
+    .question {
+      font-weight: bold;
+      color: #007bff;
+      cursor: pointer;
+    }
+
+    .answer {
+      display: none;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1>FAQs</h1>
+
+  <div class="faq-item">
+    <div class="question">What payment methods do you accept?</div>
+    <div class="answer">We accept all major credit and debit cards, as well as PayPal.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="question">How long does shipping take?</div>
+    <div class="answer">Shipping times vary depending on your location. Typically, orders are delivered within 3-5 business days.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="question">What is your return policy?</div>
+    <div class="answer">We offer a 30-day return policy for most items. Please refer to our Returns and Refunds Policy for more information.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="question">Can I track my order?</div>
+    <div class="answer">Yes, you can track your order using the tracking number provided in your shipping confirmation email.</div>
+  </div>
+</div>
+
+<script>
+  // Function to toggle answer visibility
+  function toggleAnswer() {
+    const answer = this.nextElementSibling;
+    answer.style.display = answer.style.display === 'none' ? 'block' : 'none';
+  }
+
+  // Add click event listener to all questions
+  const questions = document.querySelectorAll('.question');
+  questions.forEach(question => {
+    question.addEventListener('click', toggleAnswer);
+  });
+</script>
+
+</body>
+</html>

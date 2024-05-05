@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy</title>
+  <link rel="stylesheet" href="privacy.css">
+</head>
+<body>
+
+<div id="container">
+  <h1>Privacy Policy</h1>
+  <p>We respect your privacy and are committed to protecting it. This Privacy Policy explains our policies and practices regarding the collection, use, and disclosure of your information when you use our website.</p>
+  <p>This Privacy Policy applies to information we collect when you access or use our website.</p>
+  <p>We may collect personal information such as your name, email address, and contact information when you interact with us through our website.</p>
+  <p>We use cookies and similar tracking technologies to track the activity on our website and hold certain information.</p>
+  <p>We may use your personal information to contact you with newsletters, marketing, or promotional materials.</p>
+  <p>We may disclose your personal information if required by law or in response to valid requests by public authorities.</p>
+  <p>By using our website, you agree to the collection and use of information in accordance with this Privacy Policy.</p>
+  <button id="accept-btn">Accept</button>
+  <button id="reject-btn">Reject</button>
+</div>
+
+<script>
+  // Function to handle acceptance
+  function handleAcceptance() {
+    alert('You have accepted the privacy policy.');
+    // Implement logic to handle acceptance here
+  }
+
+  // Function to handle rejection
+  function handleRejection() {
+    alert('You have rejected the privacy policy.');
+    // Implement logic to handle rejection here
+  }
+
+  // Add event listeners to buttons
+  window.addEventListener('load', () => {
+    const acceptButton = document.getElementById('accept-btn');
+    const rejectButton = document.getElementById('reject-btn');
+    
+    acceptButton.addEventListener('click', handleAcceptance);
+    rejectButton.addEventListener('click', handleRejection);
+  });
+</script>
+
+</body>
+</html>

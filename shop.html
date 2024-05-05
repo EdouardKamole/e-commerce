@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop</title>
+  <!-- Include your CSS stylesheets here -->
+  <link rel="stylesheet" href="shop.css">
+</head>
+<body>
+
+<!-- Main Navigation -->
+<nav class="main-nav">
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="shop.html">Shop</a></li>
+    <li><a href="categories.html">Product Categories</a></li>
+    <li><a href="about.html">About Us</a></li>
+    <li><a href="contact.html">Contact Us</a></li>
+    <li><a href="account.html">My Account</a></li>
+    <li><a href="cart.html">Cart</a></li>
+  </ul>
+  <form id="search-form">
+    <input type="text" id="search-input" placeholder="Search for products...">
+    <button type="submit">Search</button>
+  </form>
+</nav>
+
+<!-- Main Content Section -->
+<main>
+  <h1>Shop</h1>
+  <div class="product-grid">
+    <!-- Product cards will be dynamically added here -->
+  </div>
+  <div id="pagination" class="pagination">
+    <!-- Pagination links will be dynamically added here -->
+  </div>
+</main>
+
+<!-- Footer Section -->
+<footer>
+  <ul>
+    <li><a href="about.html">About Us</a></li>
+    <li><a href="contact.html">Contact Us</a></li>
+    <li><a href="terms.html">Terms of Service</a></li>
+    <li><a href="privacy.html">Privacy Policy</a></li>
+    <li><a href="shipping.html">Shipping Information</a></li>
+    <li><a href="returns.html">Returns and Refunds Policy</a></li>
+    <li><a href="faqs.html">FAQs</a></li>
+  </ul>
+  <!-- Social Media Links -->
+  <div class="social-media">
+    <a href="#"><img src="images/facebook-icon.png" alt="Facebook"></a>
+    <a href="#"><img src="images/twitter-icon.png" alt="Twitter"></a>
+    <a href="#"><img src="images/instagram-icon.jpg" alt="Instagram"></a>
+    <!-- Add more social media icons and links as needed -->
+  </div>
+</footer>
+
+<!-- JavaScript -->
+<script>
+  // Sample product data (replace with actual product data)
+  const products = [
+    { id: 1, name: "Product 1", category: "Electronics", price: 10.99 },
+    { id: 2, name: "Product 2", category: "Clothing", price: 19.99 },
+    { id: 3, name: "Product 3", category: "Books", price: 14.99 },
+    { id: 4, name: "Product 4", category: "Electronics", price: 29.99 },
+    { id: 5, name: "Product 5", category: "Clothing", price: 39.99 },
+    { id: 6, name: "Product 6", category: "Books", price: 24.99 },
+    { id: 7, name: "Product 7", category: "phone", price: 225.99 },
+    { id: 8, name: "Product 8", category: "computer", price: 500.99 },
+    { id: 1, name: "Product 1", category: "Electronics", price: 10.99 },
+    { id: 2, name: "Product 2", category: "Clothing", price: 19.99 },
+    { id: 3, name: "Product 3", category: "Books", price: 14.99 },
+    { id: 4, name: "Product 4", category: "Electronics", price: 29.99 },
+    { id: 5, name: "Product 5", category: "Clothing", price: 39.99 },
+    { id: 6, name: "Product 6", category: "Books", price: 24.99 },
+    { id: 7, name: "Product 7", category: "phone", price: 225.99 },
+    { id: 8, name: "Product 8", category: "computer", price: 500.99 },
+    // Add more products as needed
+  ];
+
+  // Function to dynamically generate product cards
+  function generateProductCards(products) {
+    const productGrid = document.querySelector('.product-grid');
+
+    // Clear existing content
+    productGrid.innerHTML = '';
+
+    // Generate product cards
+    products.forEach(product => {
+      const card = document.createElement('div');
+      card.classList.add('product-card');
+      card.innerHTML = `
+        <img src="images/product${product.id}.jpg" alt="${product.name}">
+        <h2>${product.name}</h2>
+        <p>Category: ${product.category}</p>
+        <p>$${product.price.toFixed(2)}</p>
+        <button>Add to Cart</button>
+      `;
+      
+      productGrid.appendChild(card);
+    });
+  }
+
+  // Function to handle form submission (search)
+  function handleSearch(event) {
+    event.preventDefault();
+    const searchInput = document.getElementById('search-input');
+    const searchTerm = searchInput.value.trim().toLowerCase();
+
+    // Filter products based on search term
+    const filteredProducts = products.filter(product =>
+      product.name.toLowerCase().includes(searchTerm) ||
+      product.category.toLowerCase().includes(searchTerm)
+    );
+
+    generateProductCards(filteredProducts);
+  }
+
+  // Function to initialize pagination
+  function initializePagination() {
+    const pagination = document.getElementById('pagination');
+    const totalPages = Math.ceil(products.length / 6); // Assuming 6 products per page
+
+    // Clear existing pagination links
+    pagination.innerHTML = '';
+
+    // Generate pagination links
+    for (let i = 1; i <= totalPages; i++) {
+      const link = document.createElement('a');
+      link.href = `#${i}`;
+      link.textContent = i;
+      pagination.appendChild(link);
+    }
+  }
+
+  // Call the function to generate product cards and initialize pagination when the page loads
+  window.addEventListener('load', () => {
+    generateProductCards(products);
+    initializePagination();
+
+    // Add event listener for search form submission
+    const searchForm = document.getElementById('search-form');
+    searchForm.addEventListener('submit', handleSearch);
+  });
+</script>
+
+</body>
+</html>

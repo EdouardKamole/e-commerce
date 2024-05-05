@@ -1,0 +1,144 @@
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Body styles */
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+  }
+  
+  /* Main Navigation styles */
+  .main-nav {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .main-nav ul {
+    list-style: none;
+    display: flex;
+  }
+  
+  .main-nav ul li {
+    margin-right: 1rem;
+  }
+  
+  .main-nav ul li a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .main-nav form {
+    margin-left: auto;
+  }
+  
+  .main-nav input[type="text"] {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .main-nav button {
+    padding: 0.5rem 1rem;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  /* Main Content styles */
+  main {
+    padding: 2rem;
+  }
+  
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+  }
+  
+  .product-card {
+    border: 1px solid #ccc;
+    padding: 1rem;
+    background-color: #fff;
+  }
+  
+  .product-card img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .product-card h2 {
+    margin-top: 0.5rem;
+    font-size: 1.2rem;
+  }
+  
+  .product-card p {
+    margin: 0.5rem 0;
+  }
+  
+  .product-card button {
+    padding: 0.5rem 1rem;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  /* Footer styles */
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  footer ul {
+    list-style: none;
+    margin-bottom: 1rem;
+  }
+  
+  footer ul li {
+    display: inline-block;
+    margin-right: 1rem;
+  }
+  
+  footer ul li a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .social-media img {
+    width: 30px;
+    margin: 0 0.5rem;
+  }
+  
+  /* Pagination styles */
+  .pagination {
+    margin-top: 1rem;
+    text-align: center;
+  }
+  
+  .pagination a {
+    display: inline-block;
+    padding: 0.5rem;
+    margin: 0 0.25rem;
+    background-color: #4caf50;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+  }
+  
+  .pagination a:hover {
+    background-color: #45a049;
+  }

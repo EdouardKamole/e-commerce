@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us</title>
+  <link rel="stylesheet" href="about.css">
+</head>
+<body>
+
+<nav class="main-nav">
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="shop.html">Shop</a></li>
+    <li><a href="categories.html">Categories</a></li>
+    <li><a href="#">Deals</a></li>
+    <li><a href="#">Services</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+  <form id="search-form">
+    <input type="text" id="search-input" placeholder="Search products...">
+    <button type="submit">Search</button>
+  </form>
+</nav>
+
+<main>
+  <section class="about-us">
+    <h1>About Us</h1>
+    <p>Welcome to Salaam E-commerce App! At Salaam E-commerce App ,</p>
+    <p> we believe in the power of technology to transform the way you shop. Founded by CS-AI Master Eddy, our platform represents a fusion of cutting-edge artificial intelligence and seamless user experience, crafted to redefine online shopping.
+        
+        With a vision to make shopping more intuitive, efficient, and enjoyable, we've curated a diverse selection of products spanning various categories, from electronics and fashion to home essentials and beyond. Our platform is designed to cater to your every need, whether you're searching for the latest tech gadgets, trendy fashion pieces, or everyday essentials.
+        
+        What sets us apart is our commitment to innovation. Leveraging state-of-the-art AI algorithms, we personalize your shopping journey, offering tailored recommendations and intuitive search functionalities to help you discover exactly what you're looking for, faster and easier than ever before.
+        
+        But we're more than just a shopping destination; we're a community of like-minded individuals passionate about technology, convenience, and excellence. Our dedicated team works tirelessly to ensure that your experience with us is nothing short of exceptional, from seamless navigation to secure transactions and prompt customer support.
+        
+        Whether you're a tech enthusiast, a fashionista, or a busy professional, [Your E-commerce App Name] is here to simplify your shopping experience and elevate it to new heights. Join us on this journey as we revolutionize the world of online shopping, one click at a time.
+        
+        Welcome to the future of shopping. Welcome to Salaam E-commerce App
+        
+        </p>
+  </section>
+</main>
+
+<footer>
+  <ul>
+    <li><a href="#">About Us</a></li>
+    <li><a href="#">Contact Us</a></li>
+    <li><a href="#">Terms of Service</a></li>
+    <li><a href="#">Privacy Policy</a></li>
+  </ul>
+</footer>
+
+<script>
+  // Function to handle form submission (search)
+  function handleSearch(event) {
+    event.preventDefault();
+    const searchInput = document.getElementById('search-input');
+    const searchTerm = searchInput.value.trim().toLowerCase();
+
+    // Perform search functionality (you can customize this)
+    alert('Perform search for: ' + searchTerm);
+  }
+
+  // Call the function to handle search form submission
+  window.addEventListener('load', () => {
+    const searchForm = document.getElementById('search-form');
+    searchForm.addEventListener('submit', handleSearch);
+  });
+</script>
+
+</body>
+</html>
